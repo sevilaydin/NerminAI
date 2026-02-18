@@ -20,4 +20,10 @@
     <ProjectReference Include="..\NerminAI.Domain\NerminAI.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+    <Folder Include="Services\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>
