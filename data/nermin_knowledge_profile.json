@@ -1,0 +1,537 @@
+{
+  "generated_at": "2026-03-25",
+  "source_files": [
+    "conversations-000.json",
+    "conversations-001.json",
+    "conversations-002.json",
+    "conversations-003.json"
+  ],
+  "profile": {
+    "name": "Nermin",
+    "age": {
+      "value": "32-33",
+      "notes": "She said '31yaşındayım' in conv-000 (vision board message dated ~2024/2025), and later '32yaşındayım' in multiple messages across all files. In conv-003 she mentioned '33yaşında garip birisin' in passing. Most reliable: 32 at time of most conversations.",
+      "source": ["conv-000", "conv-001", "conv-002", "conv-003"]
+    },
+    "birthdate": {
+      "value": "25 January 1993",
+      "raw": "25.01.1993",
+      "notes": "Stated clearly in multiple messages about astrology/doğum haritası. In conv-003 she joked about typo writing 25.05.1993 but corrected to 25.01.1993.",
+      "source": ["conv-000", "conv-001", "conv-002", "conv-003"]
+    },
+    "birth_time": {
+      "value": "22:30",
+      "source": ["conv-000", "conv-001", "conv-003"]
+    },
+    "birthplace": {
+      "value": "Baku, Azerbaijan",
+      "raw": "Bakü/Azerbaycan",
+      "source": ["conv-000", "conv-001", "conv-003"]
+    },
+    "nationality": {
+      "value": "Azerbaijani citizen",
+      "notes": "Explicitly described herself as 'Azerbaycan vatandaşı'. She has a yabancı kimlik numarası (foreign ID) in Turkey, not Turkish citizenship. She mentioned she is applying for Turkish citizenship ('vatandaşlığa başvuracağım').",
+      "source": ["conv-000", "conv-001", "conv-002"]
+    },
+    "current_location": {
+      "city": "Kocaeli / İzmit",
+      "country": "Turkey",
+      "neighborhood_hints": "Yenişehir neighborhood mentioned in Kocaeli",
+      "notes": "Consistently references Kocaeli and İzmit as her location for doctors, cats, shopping, etc.",
+      "source": ["conv-000", "conv-001", "conv-002", "conv-003"]
+    },
+    "sun_sign": {
+      "value": "Kova (Aquarius)",
+      "source": ["conv-003"]
+    },
+    "rising_sign": {
+      "value": "Terazi (Libra)",
+      "source": ["conv-000", "conv-001", "conv-003"]
+    },
+    "moon_sign": {
+      "value": "Balık (Pisces)",
+      "source": ["conv-001", "conv-003"]
+    },
+    "human_design_profile": {
+      "value": "3/5 (uncertain, she questioned the calculation)",
+      "notes": "ChatGPT gave different numbers at different times; she was uncertain which was correct.",
+      "source": ["conv-000"]
+    }
+  },
+  "relationships": {
+    "marital_status": {
+      "value": "Married",
+      "notes": "She said 'Zaten evliyiz' and 'yeni evliyim'. She married in 2024 ('ben 2024te evlendim' in conv-003). She also mentioned 'eşimle seyahatlerde olalım'. Marriage took place in Turkey on 14 September 2024 based on astrology conversation context.",
+      "source": ["conv-000", "conv-003"]
+    },
+    "husband": {
+      "nationality": "Cibutian (Cibuti vatandaşı)",
+      "notes": "Husband's birthdate mentioned as 23.06.1993, born in Djibouti (Cibuti) at 15:45. She referenced 'eşim türk değil' indirectly by discussing Cibuti citizenship. She also mentioned husband became Turkish citizen. In conv-000, she referenced 'Kadın 25.01.1993 22.30da Baküde doğmuş erkek 23.06.1993 15.45de Cibutide doğmuş'. The marriage happened on 14 September 2024.",
+      "birthdate": "23 June 1993",
+      "birth_time": "15:45",
+      "birthplace": "Djibouti",
+      "sun_sign": "İkizler (Gemini)",
+      "additional_notes": "She complained extensively about him - lack of sex life, taking her for granted, not being emotionally available, sleeping on the couch, not apologizing, being egotistical. She wrote a very emotional message about what she needs from a partner.",
+      "source": ["conv-000", "conv-001", "conv-002"]
+    },
+    "family": {
+      "mother": {
+        "relationship_status": "Estranged - contact cut",
+        "notes": "She cut contact with her mother approximately 6 months before certain messages. She stated her mother always blamed her (e.g., 'senin yüzünden çocuk doğurdum', 'sen çok şişmansın', 'üniversite kazanmadın', 'cazgırsın'). Her mother also cheated on her father. She wanted her mother completely out of her life and her family.",
+        "source": ["conv-000"]
+      },
+      "father": {
+        "relationship_status": "Estranged - contact cut for 4 years",
+        "notes": "She said 'babamla 4senedir iletişimi kestim'. She described him as 'kötü karakter'.",
+        "source": ["conv-000"]
+      },
+      "siblings": {
+        "notes": "She has at least one sister (abla) who lives in Turkey with residency permit under family reunification (aile ikameti). There is also at least one younger sibling around age 20 (mentioned 'kardeşlerim 20yaşında'). She cut contact with siblings for approximately 1 year but maintained contact with one sibling who had surgery.",
+        "source": ["conv-000"]
+      },
+      "general_family_situation": "Deeply difficult family history. She described forced gastric reduction and cosmetic surgery by her parents when she was of legal age but under their pressure. She consulted about filing abuse lawsuits. She has almost no contact with family of origin.",
+      "source": ["conv-000"]
+    }
+  },
+  "pets": [
+    {
+      "type": "cat",
+      "gender": "male",
+      "age_at_time_of_messages": "approximately 3 years old",
+      "neutered": false,
+      "notes": "Not neutered (kısırlaştırılmamış). Has dental issues (diş iltihabı), fatty tail syndrome (yağlı kuyruk sendromu), vomiting episodes, and urinary tract crystal issues (idrar yolunda kristalleşme). She also mentioned a 2nd cat (ikinci kedim) who is black-and-white (siyah beyaz). There are 2 cats total. She referenced 'kedilerimden biri eksik' and 'iki kedi'. She calls them affectionately and refers to the male as 'oğlum'.",
+      "source": ["conv-000", "conv-001", "conv-002"]
+    },
+    {
+      "type": "cat",
+      "gender": "unknown",
+      "color": "black and white (siyah beyaz)",
+      "notes": "Second cat. Less mentioned than the first.",
+      "source": ["conv-000"]
+    }
+  ],
+  "dreams_and_goals": [
+    {
+      "category": "travel",
+      "items": [
+        "Holland (Hollanda)",
+        "Barcelona",
+        "Tbilisi (Tiflis)",
+        "Morocco (Fas/Morocco)",
+        "Egypt - Sharm el-Sheikh and Pyramids",
+        "Greece (mentioned Yunan adaları / Greek islands)",
+        "Seasonal trips with husband",
+        "Girls-only trips (kız kıza tatil)",
+        "Luxury hotel vacations"
+      ],
+      "source": ["conv-000", "conv-001"]
+    },
+    {
+      "category": "financial",
+      "items": [
+        "Wealth and abundance (zengin olmak)",
+        "Lots of dollars (bolca dolara sahib olmak)",
+        "Cars (arabımız bol olsun)",
+        "Buying a Dyson hair tool (mentioned multiple times, joked about)"
+      ],
+      "source": ["conv-000", "conv-001"]
+    },
+    {
+      "category": "career_and_business",
+      "items": [
+        "Opening a patisserie / pastry shop (pateserri açmak)",
+        "Becoming a master pastry chef (usta pastacı olmak)",
+        "Opening a 20-person boutique cafe",
+        "Family counseling / aile danışmanlığı sertifikası",
+        "Instagram pastry/recipe page (hollow crumbs or similar name considered)",
+        "Considered moving to Dubai"
+      ],
+      "notes": "She actively discussed pastry education (MEB onaylı usta pastacı eğitimi), KOSGEB incentives as a foreign citizen, and business setup requirements. She started an Instagram page for pastry content.",
+      "source": ["conv-000", "conv-001", "conv-002", "conv-003"]
+    },
+    {
+      "category": "personal_development",
+      "items": [
+        "Self-improvement (kendimi geliştirme)",
+        "Yoga and meditation practice",
+        "Reading and intellectual interests (studied old civilizations)",
+        "Pilates (reformer pilates mentioned)"
+      ],
+      "source": ["conv-000", "conv-001"]
+    },
+    {
+      "category": "family",
+      "items": [
+        "Having a baby (bebek düşünüyorum bir kaç yıl sonra)",
+        "Beautiful home with cats",
+        "Happy family life",
+        "Friends gathering and nice sofras (feasts)"
+      ],
+      "source": ["conv-000", "conv-001"]
+    },
+    {
+      "category": "aesthetic_and_lifestyle",
+      "items": [
+        "Beautiful appearance at travel destinations",
+        "Concerts and laughter",
+        "Shopping",
+        "Nice home"
+      ],
+      "source": ["conv-000"]
+    }
+  ],
+  "personality": [
+    {
+      "trait": "Emotionally expressive and open",
+      "evidence": "Shares very deep personal feelings, trauma, family struggles, marital difficulties with ChatGPT at length.",
+      "source": ["conv-000", "conv-001"]
+    },
+    {
+      "trait": "Strong and resilient with periods of exhaustion",
+      "evidence": "She said 'hep çok sevildim hep çok güçlü ve güzel hissettim ama son zamanlarda yorgunluğum bana ağır geliyor'. Also: '32yaşına kadar hep bir şeylerden geçmek zorlanmak kırılmak...'",
+      "source": ["conv-000", "conv-001"]
+    },
+    {
+      "trait": "Demanding of quality and effort from others",
+      "evidence": "Very clear expectations from her husband - she wrote an emphatic message about needing someone who won't be a burden, who will lift her up, who has love, romance, and money fully.",
+      "source": ["conv-001"]
+    },
+    {
+      "trait": "Humorous, witty, playful",
+      "evidence": "Frequently uses 🤣 emoji, jokes with ChatGPT, uses nicknames ('canisim', 'tatlım', 'ponçiğim'), makes self-deprecating jokes.",
+      "source": ["conv-000", "conv-001", "conv-002", "conv-003"]
+    },
+    {
+      "trait": "Curious and intellectually engaged",
+      "evidence": "Asked about ancient civilizations, astrology (in depth), human design, history, geography, current events.",
+      "source": ["conv-000", "conv-001"]
+    },
+    {
+      "trait": "Entrepreneurial and ambitious",
+      "evidence": "Actively researching business setup, pastry education, market opportunities.",
+      "source": ["conv-000", "conv-001", "conv-002"]
+    },
+    {
+      "trait": "Possibly questioning narcissistic tendencies",
+      "evidence": "Asked 'Sence ben narsist bir kişilik miyim?' in conv-003. Described herself as becoming hırçın (aggressive/irritable) in relationship conflicts.",
+      "source": ["conv-003"]
+    },
+    {
+      "trait": "Drama queen (self-described jokingly)",
+      "evidence": "Said 'tam bir drama queenim ne yapalım' in conv-001. Self-aware about it.",
+      "source": ["conv-001"]
+    },
+    {
+      "trait": "Perfectionistic about aesthetics",
+      "evidence": "Very particular about vision board designs, tattoo designs, food presentations, home visuals. Rejects multiple iterations.",
+      "source": ["conv-000", "conv-001", "conv-002"]
+    },
+    {
+      "trait": "Multilingual",
+      "evidence": "Communicates in Turkish, Azerbaijani (with Azerbaijani dialect), Russian, and some English. Mixes languages naturally.",
+      "source": ["conv-001", "conv-002", "conv-003"]
+    }
+  ],
+  "preferences": {
+    "food": {
+      "likes": [
+        "Sushi (made it herself from scratch)",
+        "Tiramisu (made Italian version at home)",
+        "Rakı table with mezes (very fond of)",
+        "Mantar mezesi (mushroom mezze)",
+        "Balzamik salata sosu",
+        "Sezar salata",
+        "Sosyete mantısı",
+        "Dana eti yemekleri",
+        "Turşu (makes her own - kornişon, lahana, pancar, etc.)",
+        "Kışlık domates sosu (made 30kg worth)",
+        "Napolyon pastası (Napoleon cake - Azerbaijani/Russian style)",
+        "Azerbaijani dishes: yarpaq xıngal, levengi, qazmaq, vişneli sarma",
+        "Pastry and cakes (active baker)",
+        "Zeytinyağlı yemekler",
+        "Çerkes tavuğu",
+        "Şawarma (real version, not Turkish)",
+        "Avocado dishes"
+      ],
+      "notes": "Very active cook. Prepares elaborate meals, makes pastries including pandispanya, cinnabon, cheesecake. Has a professional mixer. Interested in opening a pastry business.",
+      "source": ["conv-000", "conv-001", "conv-002", "conv-003"]
+    },
+    "drinks": {
+      "likes": [
+        "Rakı",
+        "Margarita (especially pink margarita)",
+        "Limoncello",
+        "Baileys",
+        "Espresso / high-quality coffee",
+        "Menengiç kahvesi",
+        "Wine (şarap - organized a wine evening for 4-5 people)",
+        "IQOS / heated tobacco products (owns IQOS Iluma I Prime)"
+      ],
+      "notes": "Drinks alcohol socially and enjoys it. Uses IQOS. Previously asked about interactions with medications and alcohol.",
+      "source": ["conv-000", "conv-001", "conv-002"]
+    },
+    "shopping": {
+      "likes": [
+        "Dyson hair products (dreamed about multiple times)",
+        "Pandora charms",
+        "JBL speakers",
+        "Zara / Zara Kids",
+        "Revolution Skincare",
+        "La Roche-Posay / Bioderma / Cerave",
+        "IQOS devices",
+        "Stanley thermoses"
+      ],
+      "style_hints": "Appreciates modern, chic, aesthetically pleasing items. Has tattoos (at least 4 known: left arm - mountains/sea/sun/wave, back - lotus, left shoulder - turna bird with crescent moon design planned, inner arm - two zillie design). Has piercings (4 ear piercings). Had cosmetic procedures: breast augmentation (2019, lift + implants, inverted-T scar), Botox (3 zones), lip filler (bayblis treatment).",
+      "source": ["conv-000", "conv-001", "conv-002", "conv-003"]
+    },
+    "hobbies": [
+      "Cooking and baking (very active, professional-level interest)",
+      "Astrology (deep interest - regularly checks birth charts, sadesati, transits)",
+      "Human design",
+      "Interior design / vision boarding",
+      "Watching series (Behzat Ç, Kurtlar Vadisi, The Handmaid's Tale, The Perfect Couple, One Piece)",
+      "Yoga and meditation (practiced but lapsed, wants to return)",
+      "Reformer pilates (considering)",
+      "Rowing / kürek çekme (interested in learning)",
+      "Tattoo design (active collector)",
+      "Reading (mentioned Yu Hua 'Yaşamak', studied old civilizations)"
+    ],
+    "source": ["conv-000", "conv-001", "conv-002", "conv-003"]
+  },
+  "health": [
+    {
+      "condition": "Iron deficiency anemia (kansızlık / demir eksikliği)",
+      "treatment": "Inferject 500mg/10ml IV iron infusions (had taken multiple rounds, including two vials at once). Also oral iron supplement.",
+      "source": ["conv-000", "conv-001"]
+    },
+    {
+      "condition": "Hidradenitis Suppurativa (HS)",
+      "stage": "Stage 1-2 (one Stage 2 lesion in groin, two Stage 1 lesions)",
+      "notes": "Has had it for 2+ years. Groin area, has spread to second side. Treated with Tetradox 100mg (antibiotics), then Rifampisin+Klindamisin, then Klindamisin alone when Rifampisin unavailable. Nadixa cream. She tends to squeeze lesions which worsens the condition. Does not have severe atacks.",
+      "source": ["conv-001", "conv-002"]
+    },
+    {
+      "condition": "Uterine wall thickening (rahim duvarı kalınlığı)",
+      "treatment": "Duphaston (progesterone) - used for approximately 3 months. Underwent hormonal tests: TSH, FSH, E2, LH, Beta, AMH. Biopsy was considered. Result was benign (negative for malignancy - 'tertemizim'). HPV negative, smear done.",
+      "source": ["conv-000", "conv-001"]
+    },
+    {
+      "condition": "Varicose veins (varis)",
+      "notes": "Present since age 16, worsened significantly in last 1 year. Grandmother had severe varicose veins. Varices on both lower and upper legs. Ultrasound showed venous reflux. Was recommended Doxium 500mg.",
+      "source": ["conv-001"]
+    },
+    {
+      "condition": "Breast implants (göğüs protezi)",
+      "notes": "Had surgery in 2019 (lift + implant, inverted-T incision). Never went for follow-up check. Described procedure as forced by parents (she signed as adult but under parental pressure).",
+      "source": ["conv-001", "conv-002"]
+    },
+    {
+      "condition": "Gastric reduction surgery (mide küçültme ameliyatı)",
+      "notes": "Had this done under parental pressure. She described it as coerced even though she signed herself. Used as potential evidence in an abuse lawsuit she researched.",
+      "source": ["conv-000"]
+    },
+    {
+      "condition": "Low vitamin D (D vitamini düşüklüğü)",
+      "treatment": "D vitamin supplements (D-Colefor or Coledan 20,000 IU).",
+      "source": ["conv-002"]
+    },
+    {
+      "condition": "Low folate (folat düşüklüğü)",
+      "notes": "Possibly related to prolonged antibiotic use (2 months of antibiotics). Also takes folik asit supplement.",
+      "source": ["conv-002"]
+    },
+    {
+      "condition": "Eczema (egzama)",
+      "notes": "Seasonal eczemas, sometimes spreading to above the eyes. Treated with Dermo Rest Duo cream. Also has seborrheic or similar skin issues.",
+      "source": ["conv-001"]
+    },
+    {
+      "condition": "Back pain / bel ağrısı",
+      "notes": "1-week back pain radiating to one leg. Also neck stiffness (boyun düzleşmesi confirmed on MRI). Left shoulder injury from 8 years ago (incorrectly worn posture brace). Knee issues - knee slipping when walking/descending stairs. Had MRI of shoulder and knee.",
+      "source": ["conv-000", "conv-003"]
+    },
+    {
+      "condition": "Elevated RF (Romatoid Faktör) value",
+      "notes": "RF value was 56 (elevated). She asked if she has RA. Blood tests showed various inflammation markers.",
+      "source": ["conv-000", "conv-001"]
+    },
+    {
+      "condition": "High heart rate and blood pressure episode",
+      "notes": "Heart rate 111, blood pressure 135/85 at age 32. Also reported waking up at night with heart pain when lying on left side.",
+      "source": ["conv-000"]
+    },
+    {
+      "condition": "Depression / anxiety - started antidepressant",
+      "notes": "Was prescribed Lustral (sertraline/Zoloft) - started at 25mg for 1 week then full dose. Also asked about Valerian/Volokardin Turkish equivalents. Went to psychiatrist.",
+      "source": ["conv-003"]
+    },
+    {
+      "condition": "Herpes simplex (uçuk / cold sore)",
+      "notes": "First outbreak in ~20 years. Was very distressed about it. Treated with Asiviral tablets and Hametan.",
+      "source": ["conv-002"]
+    },
+    {
+      "condition": "Migraines (migren)",
+      "notes": "Asked about migraine diagnosis and whether Botox helps with migraine.",
+      "source": ["conv-002"]
+    },
+    {
+      "condition": "Kist/tümör on arm",
+      "notes": "Had a cyst/tumor-like growth on her arm surgically removed (eksizyon). Had 4 stitches on one leg and 3 on another (possibly HS-related). Pathology result: benign (iyi huylu tümör).",
+      "source": ["conv-003"]
+    },
+    {
+      "condition": "Cervical issues (boyun düzleşmesi)",
+      "notes": "MRI confirmed cervical straightening. Doctor said 'çok ileri seviye'. Was given exercises.",
+      "source": ["conv-003"]
+    }
+  ],
+  "education": [
+    {
+      "level": "University",
+      "field": "Çocuk Gelişimi (Child Development)",
+      "notes": "She referenced 'Çocuk gelişimi okuyan biri nasıl aile danışmanlığı verebilir' which implies she studied child development. She was asking how to pivot to family counseling with that background.",
+      "source": ["conv-000"]
+    },
+    {
+      "level": "Additional",
+      "notes": "She had a university enrollment at Istanbul University (İstanbul üniversitesi) that she 'dondurmuş' (frozen/deferred). She referenced being in Turkey since 2011 on student residency permit, suggesting university enrollment from 2011-2017 period.",
+      "source": ["conv-002"]
+    }
+  ],
+  "important_statements": [
+    {
+      "statement": "Ben Nermin 31yaşındayım 2025 vision board için hayallerim: Bol bol gezmek hollanda barcelona Tiflis ve moroccoyu görmek her mevsim eşimle bir tatile çıkmak arkadaşlarımla tatil yapıp evimizde güzel sofralar kurmak lüks otel tatilleri kız kıza tatil yapmak, zengin olmak bolca dolara sahib olmak...",
+      "context": "Vision board planning, reveals life goals",
+      "source": "conv-000"
+    },
+    {
+      "statement": "Annemin söylentilerinin tam tersi oldum hep çok sevildim hep çok güçlü ve güzel hissettim ama son zamanlarda yorgunluğum bana ağır geliyor",
+      "context": "About her mother and current emotional state",
+      "source": "conv-000"
+    },
+    {
+      "statement": "Hayır annemle ilişkimi değiştirmek değil de onun hayatımdan komple bana ve aileme uzanmayacak şekilde çıkarmak istiyorum",
+      "context": "About cutting mother out of life completely",
+      "source": "conv-000"
+    },
+    {
+      "statement": "BEN NERMİNİM BENİMLE BU YOLU BİR İNSAN YÜRÜYECEKSE EĞER BANA YÜK OLMAYACAK... SEVGİSİ SEVİŞMESİ PARASI PULU TAM OLACAK HER ŞEYİNİ BENİ MUTLU ETMEK İÇİN ORTAYA KOYAN BİR ŞEKİLDE YÜRÜYECEK BENİMLE!!!",
+      "context": "Manifesto about what she needs in her relationship - written in frustration",
+      "source": "conv-001"
+    },
+    {
+      "statement": "32yaşına kadar hep bir şeylerden geçmek zorlanmak kırılmak mutluluk için gülmek için bile çaba vermek sırf ben uğraşıyorum efor sarf ediyorum diye mi daha da zorladı beni bu dünya anlamıyorum ki ben galiba yaşayamıyorum da",
+      "context": "Deep emotional expression about life hardship",
+      "source": "conv-001"
+    },
+    {
+      "statement": "Kendimi çok eksik savunmasız yalnız keyifsiz hissediyorum kendimi sevmem kendime yetmiyor birileri tarafından sevildiğimi değerli hissetmek istiyorum",
+      "context": "Emotional state / emotional needs",
+      "source": "conv-001"
+    },
+    {
+      "statement": "2019yılında protez meme yaptırdım ve hiç kontrole gitmedim",
+      "context": "Health - breast implant follow-up concern",
+      "source": "conv-001"
+    },
+    {
+      "statement": "Mesela elimde bir kanıt yok amma onların zoruyla mide küçültme ve estetik ameliyatı oldum ve reşit olduğum için ameliyatları kendim imzaladım bunlar delil sayılır mı",
+      "context": "About potential lawsuit against parents for coerced medical procedures",
+      "source": "conv-000"
+    },
+    {
+      "statement": "Bu aralar kendime iyi bakıyorum dimi kan tahlilleri üstüne bu bide kbb ye gittik mi mükemmel yaşamaya devam",
+      "context": "Self-care pride and positive momentum",
+      "source": "conv-000"
+    },
+    {
+      "statement": "Ben 2024te evlendim kız",
+      "context": "Confirming marriage year 2024",
+      "source": "conv-003"
+    },
+    {
+      "statement": "Kocaeliden başvuracağım",
+      "context": "About her Azerbaijani driver's license renewal - confirms Kocaeli as current location",
+      "source": "conv-002"
+    },
+    {
+      "statement": "2011-2017öğrenci oturma izni, 2017eylülde bitiyor - 2018 ağustos ayında ülkeden çıkarken cezayı ödeyerek geri dönüp turistik oturma izni alıyorum her sene kesintisiz, 2025 mart ayında ise aile ikamet izni aldım",
+      "context": "Detailed residency history in Turkey",
+      "source": "conv-000"
+    }
+  ],
+  "faq_ready_facts": [
+    "Full name: Nermin",
+    "Birthdate: 25 January 1993",
+    "Birth time: 22:30",
+    "Birthplace: Baku, Azerbaijan",
+    "Nationality: Azerbaijani citizen living in Turkey (Kocaeli/İzmit) on family reunification residency permit (aile ikamet izni, received March 2025). Applying for Turkish citizenship.",
+    "Age at time of conversations: 32 (turned 33 in January 2026)",
+    "Married in 2024 to a Cibutian (Djiboutian) husband (born 23.06.1993)",
+    "Has two cats (both male?), one of whom is uncastrated with health issues",
+    "Lives in Kocaeli/İzmit, Turkey",
+    "Sun sign: Aquarius (Kova), Rising: Libra (Terazi), Moon: Pisces (Balık)",
+    "Had breast augmentation + lift surgery in 2019",
+    "Had gastric reduction surgery (under parental coercion)",
+    "Has Hidradenitis Suppurativa (HS) - Stage 1-2",
+    "Suffers from iron deficiency anemia and takes IV iron infusions",
+    "Started antidepressant (Lustral/sertraline) in late 2025/2026",
+    "Dreams of traveling to Holland, Barcelona, Tbilisi, Morocco",
+    "Wants to open a patisserie/boutique cafe",
+    "Active home baker - makes sushi, tiramisu, pandispanya, turşu, etc.",
+    "Enjoys rakı, wine, margarita, coffee",
+    "Smokes IQOS (heated tobacco) - owns IQOS Iluma I Prime",
+    "Has tattoos: left arm (mountains/sea/sun), back (lotus), shoulder (bird/crescent planned)",
+    "Has 4 ear piercings",
+    "Has had Botox (3 zones) and lip filler (bayblis treatment)",
+    "Studies/studied Child Development at university; interested in family counseling certification",
+    "Has dysfunctional relationship with both parents; cut contact with mother (~6 months) and father (~4 years)",
+    "Describes her marriage as struggling - husband is emotionally unavailable, lacks initiative, no sex life satisfaction",
+    "Multilingual: Turkish, Azerbaijani, Russian, some English",
+    "Registered in Kocaeli with a yabancı kimlik (foreign ID number starting with 99)",
+    "Has been in Turkey since 2011 (student permit → tourist permit → family permit)"
+  ],
+  "confidence_notes": [
+    {
+      "item": "Birthdate 25.01.1993",
+      "confidence": "HIGH - repeated across all 4 files in multiple contexts",
+      "caveat": "Once typed '25.05.1993' but immediately self-corrected to January"
+    },
+    {
+      "item": "Age 32",
+      "confidence": "HIGH - stated multiple times. Turned 33 in January 2026 (current date in context is March 2026)",
+      "caveat": "Some messages say 31, those are likely from early 2024 conversations before her birthday"
+    },
+    {
+      "item": "Husband's nationality as Cibutian",
+      "confidence": "MEDIUM-HIGH - she described him as born in Djibouti and referenced 'Cibuti vatandaşı' in questions about visas, but never stated 'eşim Cibutili' directly. The birth data she used for couple astrology readings was 23.06.1993, Djibouti",
+      "caveat": "Could be a third-party scenario, but context strongly implies he is her husband"
+    },
+    {
+      "item": "Husband's Turkish citizenship",
+      "confidence": "MEDIUM - she used third-person phrasing in some questions but the context (marriage questions, SGK, visa applications) strongly implies her husband obtained Turkish citizenship",
+      "caveat": "Some questions may have been for a friend or sibling"
+    },
+    {
+      "item": "Marriage date of 14 September 2024",
+      "confidence": "MEDIUM - derived from astrology conversation where she described 'bu tarihlerde evlenen' with dates that matched her and her husband's birth data. Also confirmed 2024 marriage year.",
+      "caveat": "Not stated 100% explicitly as marriage date"
+    },
+    {
+      "item": "Child Development education",
+      "confidence": "MEDIUM - she asked 'Çocuk gelişimi okuyan biri nasıl aile danışmanlığı verebilir' implying her own background",
+      "caveat": "Could have been asking on behalf of someone else"
+    },
+    {
+      "item": "Hair type/appearance",
+      "confidence": "LOW-MEDIUM - she mentioned 'saçlarım düz' (straight hair) in vision board context",
+      "caveat": "Contextual mention only"
+    },
+    {
+      "item": "Number of tattoos",
+      "confidence": "HIGH for mentioned ones - left arm (mountains/sea/sun/wave design), back (lotus + possibly moon), left shoulder (turna/crane bird with crescent moon), inner arm (two zillie design in progress)",
+      "caveat": "More may exist"
+    }
+  ]
+}

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NerminAI.Domain.Entities;
 
 namespace NerminAI.Domain.Interfaces
 {
@@ -11,8 +7,12 @@ namespace NerminAI.Domain.Interfaces
         Task<IEnumerable<Chunk>> SearchSimilarChunksAsync(
             float[] queryEmbedding,
             int topK = 5,
-            double threshold = 0.7
-            );
+            double threshold = 0.7);
+
+        Task<IEnumerable<Chunk>> SearchByKeywordsAsync(
+            IEnumerable<string> keywords,
+            int topK = 3);
+
         Task<Embedding> AddEmbeddingAsync(Guid chunkId, float[] vector, string model);
         Task<bool> HasEmbeddingAsync(Guid chunkId);
     }

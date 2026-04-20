@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: nerminai-db
+    environment:
+      POSTGRES_DB: nerminai
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: nerminai-api
+    ports:
+      - "5054:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=nerminai;Username=postgres;Password=postgres
+      - LLMSettings__Groq__ApiKey=${GROQ_API_KEY:-}
+      - EmbeddingSettings__BaseUrl=http://embedding:8000
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  pgdata:
