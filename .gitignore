@@ -361,3 +361,14 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+# Secrets & local config
+NerminAI.API/appsettings.json
+NerminAI.API/appsettings.Development.json
+
+# Streamlit chat history
+streamlit/chats.json
+
+# Logs
+*.log
+embed.*.log
+api.*.log

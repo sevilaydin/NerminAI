@@ -33,15 +33,16 @@ namespace NerminAI.Application.Services
             var profile = await _profileRepository.GetActiveProfileAsync();
             var systemPrompt = BuildPersonaSystemPrompt(profile);
 
-            // 2. Embed the question
-            var queryEmbedding = await _embeddingService.GenerateEmbeddingAsync(request.Question);
+            // 2. Embed the question — kısa/belirsiz sorgularda önceki user mesajını ekle
+            var searchQuery = BuildSearchQuery(request.Question, request.ConversationHistory);
+            var queryEmbedding = await _embeddingService.GenerateEmbeddingAsync(searchQuery);
 
             // 3. Vector search
             var chunks = (await _vectorRepository.SearchSimilarChunksAsync(
                 queryEmbedding, request.TopK, request.MinSimilarity)).ToList();
 
             // 3b. Keyword fallback — boost retrieval with direct keyword search
-            var keywords = ExtractKeywords(request.Question);
+            var keywords = ExtractKeywords(searchQuery);
             if (keywords.Any())
             {
                 var keywordChunks = (await _vectorRepository.SearchByKeywordsAsync(keywords, topK: 3)).ToList();
@@ -64,8 +65,10 @@ namespace NerminAI.Application.Services
             if (_llmService.IsAvailable)
             {
                 var contextTexts = chunks.Select(c => c.Content);
+                var history = request.ConversationHistory
+                    .Select(m => (m.Role, m.Content));
                 answer = await _llmService.GeneratePersonalAnswerAsync(
-                    request.Question, systemPrompt, contextTexts, request.NoLLMFallback);
+                    request.Question, systemPrompt, contextTexts, request.NoLLMFallback, history, request.LastSuggestions);
 
                 mode = request.NoLLMFallback
                     ? "NoLLM-Template"
@@ -87,6 +90,22 @@ namespace NerminAI.Application.Services
                 Sources = sources,
                 LatencyMs = sw.ElapsedMilliseconds
             };
+        }
+
+        private static string BuildSearchQuery(string question, List<ConversationMessage> history)
+        {
+            // Kısa/belirsiz sorgular için önceki konuşmadan bağlam ekle
+            var words = question.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            if (words.Length <= 3 && history.Count > 0)
+            {
+                // Son birkaç mesajdan konuyu çek
+                var recentContext = string.Join(" ", history
+                    .TakeLast(4)
+                    .Select(m => m.Content)
+                    .Where(c => c.Length > 5));
+                return $"{recentContext} {question}".Trim();
+            }
+            return question;
         }
 
         private static string BuildPersonaSystemPrompt(PersonProfile? profile)

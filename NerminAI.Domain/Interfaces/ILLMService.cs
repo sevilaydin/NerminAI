@@ -13,7 +13,9 @@ namespace NerminAI.Domain.Interfaces
             string question,
             string personaSystemPrompt,
             IEnumerable<string> retrievedChunks,
-            bool noLLMFallback = false);
+            bool noLLMFallback = false,
+            IEnumerable<(string Role, string Content)>? conversationHistory = null,
+            IEnumerable<string>? lastSuggestions = null);
 
         bool IsAvailable { get; }
     }

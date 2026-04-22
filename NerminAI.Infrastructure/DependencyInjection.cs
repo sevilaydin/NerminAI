@@ -47,7 +47,10 @@ namespace NerminAI.Infrastructure
             // LLM Service
             var groqApiKey = configuration["LLMSettings:Groq:ApiKey"] ?? "";
             var groqModel = configuration["LLMSettings:Groq:Model"] ?? "llama-3.3-70b-versatile";
-            services.AddHttpClient<ILLMService, GroqLLMService>()
+            services.AddHttpClient<ILLMService, GroqLLMService>(client =>
+            {
+                client.Timeout = TimeSpan.FromSeconds(60);
+            })
             .AddTypedClient<ILLMService>((client, sp) =>
                 new GroqLLMService(client, groqApiKey, groqModel));
 
