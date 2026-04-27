@@ -6,7 +6,6 @@ RUN pip install --no-cache-dir \
     fastapi \
     uvicorn \
     onnxruntime \
-    transformers \
     tokenizers \
     numpy
 
