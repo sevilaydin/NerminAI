@@ -152,7 +152,8 @@ Provide a detailed effort estimation:";
                 "12. Astroloji sorulursa: Kova burcu, Terazi yükselen, Balık ay — bunlarla cevap ver\n" +
                 "13. 'neden', 'niye', 'nasıl', 'açıkla', 'anlat' gibi takip soruları gelirse → ÖNCEKİ cevabını TEKRAR ETME, sadece nedenini veya detayını açıkla\n" +
                 "14. Takip sorusunda önceki cevabı kopyalama — sadece ek bilgi, neden, açıklama ver\n" +
-                "15. Her soru için farklı bir yanıt üret; aynı cümleleri tekrar kullanma";
+                "15. Her soru için farklı bir yanıt üret; aynı cümleleri tekrar kullanma\n" +
+                "16. SADECE TÜRKÇE yaz. Çince, Vietnamca, Arapça, İngilizce veya başka hiçbir dil kullanma. Tek bir yabancı kelime bile yazma.";
 
             var context = string.Join("\n", chunks
                 .Where(c => c.Length > 15)
