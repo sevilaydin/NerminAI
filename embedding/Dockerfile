@@ -9,6 +9,13 @@ RUN pip install --no-cache-dir \
     tokenizers \
     numpy
 
+RUN mkdir -p /app/model && \
+    python -c "\
+import urllib.request; \
+urllib.request.urlretrieve('https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/onnx/model.onnx', '/app/model/model.onnx'); \
+urllib.request.urlretrieve('https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/tokenizer.json', '/app/model/tokenizer.json'); \
+print('Models downloaded successfully')"
+
 COPY embedding_server.py .
 
 EXPOSE 8000

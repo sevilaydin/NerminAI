@@ -1,42 +1,26 @@
-import os
-os.environ["TRANSFORMERS_OFFLINE"] = "1"
-
 from fastapi import FastAPI
 from pydantic import BaseModel
 from tokenizers import Tokenizer
 from onnxruntime import InferenceSession
 import numpy as np
-import urllib.request
 import pathlib
-import json
 
 app = FastAPI()
 
 MODEL_DIR = pathlib.Path("/app/model")
 ONNX_PATH = MODEL_DIR / "model.onnx"
 TOKENIZER_PATH = MODEL_DIR / "tokenizer.json"
-SPECIAL_TOKENS_PATH = MODEL_DIR / "special_tokens_map.json"
-TOKENIZER_CONFIG_PATH = MODEL_DIR / "tokenizer_config.json"
 
 tokenizer = None
 session = None
 
-BASE_URL = "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main"
-
-def download(url, dest):
-    if not dest.exists():
-        print(f"Downloading {dest.name}...")
-        urllib.request.urlretrieve(url, dest)
-
 def load_model():
     global tokenizer, session
-    MODEL_DIR.mkdir(exist_ok=True)
-    download(f"{BASE_URL}/onnx/model.onnx", ONNX_PATH)
-    download(f"{BASE_URL}/tokenizer.json", TOKENIZER_PATH)
     tokenizer = Tokenizer.from_file(str(TOKENIZER_PATH))
     tokenizer.enable_padding(pad_id=0, pad_token="[PAD]")
     tokenizer.enable_truncation(max_length=128)
     session = InferenceSession(str(ONNX_PATH))
+    print("Model loaded successfully")
 
 load_model()
 
@@ -50,9 +34,6 @@ def normalize(v):
 
 class EmbedRequest(BaseModel):
     texts: list[str]
-
-class EmbedResponse(BaseModel):
-    Embeddings: list[list[float]]
 
 @app.post("/embed")
 def embed(request: EmbedRequest):
