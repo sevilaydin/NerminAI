@@ -2,11 +2,14 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-RUN pip install --no-cache-dir fastapi uvicorn sentence-transformers
+RUN pip install --no-cache-dir \
+    fastapi \
+    uvicorn \
+    onnxruntime \
+    tokenizers \
+    numpy
 
-COPY embedding_server.py .
-
-RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')"
+COPY embedding/embedding_server.py .
 
 EXPOSE 8000
 
