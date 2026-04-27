@@ -32,17 +32,8 @@ namespace NerminAI.Infrastructure
             services.AddScoped<ILifeEventRepository, LifeEventRepository>();
             services.AddScoped<IInterestRepository, InterestRepository>();
 
-            // Embedding Service
-            var embeddingUrl = configuration["EmbeddingSettings:BaseUrl"] ?? "http://localhost:8000";
-            var embeddingModel = configuration["EmbeddingSettings:Model"] ?? "all-MiniLM-L6-v2";
-            services.AddHttpClient<IEmbeddingService, LocalEmbeddingService>(client =>
-            {
-                client.BaseAddress = new Uri(embeddingUrl);
-                client.Timeout = TimeSpan.FromSeconds(30);
-            })
-            .ConfigureHttpClient((sp, client) => { })
-            .AddTypedClient<IEmbeddingService>((client, sp) =>
-                new LocalEmbeddingService(client, embeddingModel));
+            // Embedding Service (built-in, no external service needed)
+            services.AddSingleton<IEmbeddingService, LocalEmbeddingService>();
 
             // LLM Service
             var groqApiKey = configuration["LLMSettings:Groq:ApiKey"] ?? "";

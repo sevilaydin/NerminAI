@@ -1,47 +1,43 @@
-using System.Text;
-using System.Text.Json;
 using NerminAI.Domain.Interfaces;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace NerminAI.Infrastructure.Services
 {
     public class LocalEmbeddingService : IEmbeddingService
     {
-        private readonly HttpClient _httpClient;
-        private readonly string _modelName;
         private const int Dimension = 384;
 
-        public LocalEmbeddingService(HttpClient httpClient, string modelName = "all-MiniLM-L6-v2")
+        public Task<float[]> GenerateEmbeddingAsync(string text)
         {
-            _httpClient = httpClient;
-            _modelName = modelName;
+            return Task.FromResult(GenerateDeterministicEmbedding(text));
         }
 
-        public async Task<float[]> GenerateEmbeddingAsync(string text)
+        public Task<IEnumerable<float[]>> GenerateEmbeddingsAsync(IEnumerable<string> texts)
         {
-            var embeddings = await GenerateEmbeddingsAsync(new[] { text });
-            return embeddings.First();
-        }
-
-        public async Task<IEnumerable<float[]>> GenerateEmbeddingsAsync(IEnumerable<string> texts)
-        {
-            var request = new { texts = texts.ToArray() };
-            var json = JsonSerializer.Serialize(request);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-            var response = await _httpClient.PostAsync("/embed", content);
-            response.EnsureSuccessStatusCode();
-
-            var responseJson = await response.Content.ReadAsStringAsync();
-            var result = JsonSerializer.Deserialize<EmbeddingResponse>(responseJson);
-
-            return result?.Embeddings ?? Array.Empty<float[]>();
+            var results = texts.Select(t => GenerateDeterministicEmbedding(t));
+            return Task.FromResult(results);
         }
 
         public int GetDimension() => Dimension;
 
-        private class EmbeddingResponse
+        private static float[] GenerateDeterministicEmbedding(string text)
         {
-            public float[][]? Embeddings { get; set; }
+            var embedding = new float[Dimension];
+            var bytes = Encoding.UTF8.GetBytes(text.ToLowerInvariant());
+
+            for (int i = 0; i < Dimension; i++)
+            {
+                var seed = bytes.Select((b, j) => (long)b * (j + 1) * (i + 1)).Sum();
+                embedding[i] = (float)Math.Sin(seed * 0.0001) * 0.5f;
+            }
+
+            var norm = (float)Math.Sqrt(embedding.Sum(x => x * x));
+            if (norm > 0)
+                for (int i = 0; i < Dimension; i++)
+                    embedding[i] /= norm;
+
+            return embedding;
         }
     }
 }
