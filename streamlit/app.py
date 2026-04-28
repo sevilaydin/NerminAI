@@ -55,13 +55,28 @@ st.markdown("""
     header { visibility: hidden; }
     footer { visibility: hidden; }
 
+    /* Sidebar açma/kapama ikonu — header gizli olsa bile görünsün */
+    [data-testid="collapsedControl"] {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: fixed !important;
+        top: 0.6rem !important;
+        left: 0.6rem !important;
+        z-index: 9999 !important;
+        background: rgba(255,240,245,0.95) !important;
+        border-radius: 8px !important;
+        padding: 4px !important;
+        box-shadow: 0 2px 8px rgba(200,80,120,0.15) !important;
+    }
+    [data-testid="collapsedControl"] svg { color: #c0406a !important; fill: #c0406a !important; }
+
     /* Sidebar */
     section[data-testid="stSidebar"] {
         background: linear-gradient(180deg, #fff0f5, #fde8d8) !important;
         border-right: 1px solid rgba(220,120,140,0.15) !important;
     }
     section[data-testid="stSidebar"] * { color: #2d1a20 !important; }
-    [data-testid="collapsedControl"] { display: flex !important; }
 
     .block-container { padding-top: 1.5rem; padding-bottom: 2rem; max-width: 750px; }
 
