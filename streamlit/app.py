@@ -44,7 +44,14 @@ st.markdown("""
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
-    .stApp { background: linear-gradient(135deg, #fff5f0 0%, #ffeef5 50%, #fff0e8 100%); }
+    /* Tema zorlaması — karanlık mod devre dışı */
+    :root { color-scheme: light only !important; }
+    html, body { background-color: #fff5f0 !important; color: #2d1a20 !important; }
+
+    .stApp {
+        background: linear-gradient(135deg, #fff5f0 0%, #ffeef5 50%, #fff0e8 100%) !important;
+        color: #2d1a20 !important;
+    }
     header { visibility: hidden; }
     footer { visibility: hidden; }
 
@@ -53,6 +60,7 @@ st.markdown("""
         background: linear-gradient(180deg, #fff0f5, #fde8d8) !important;
         border-right: 1px solid rgba(220,120,140,0.15) !important;
     }
+    section[data-testid="stSidebar"] * { color: #2d1a20 !important; }
     [data-testid="collapsedControl"] { display: flex !important; }
 
     .block-container { padding-top: 1.5rem; padding-bottom: 2rem; max-width: 750px; }
@@ -70,22 +78,29 @@ st.markdown("""
         -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         background-clip: text; margin: 0 0 0.3rem 0;
     }
-    .nermin-header .subtitle { color: #b07080; font-size: 0.88rem; margin: 0; font-style: italic; }
+    .nermin-header .subtitle { color: #b07080 !important; font-size: 0.88rem; margin: 0; font-style: italic; }
     .nermin-header .tags { margin-top: 0.7rem; display: flex; justify-content: center; gap: 0.4rem; flex-wrap: wrap; }
-    .tag { background: rgba(200,80,100,0.1); color: #c0406a; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.72rem; font-weight: 500; }
+    .tag { background: rgba(200,80,100,0.1); color: #c0406a !important; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.72rem; font-weight: 500; }
+
+    /* Sohbet mesajları — yazı rengi her zaman koyu */
+    [data-testid="stChatMessage"] { color: #2d1a20 !important; }
+    [data-testid="stChatMessage"] p,
+    [data-testid="stChatMessage"] span,
+    [data-testid="stChatMessage"] div { color: #2d1a20 !important; }
 
     [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-user"]) {
         background: linear-gradient(135deg, #fce4ec, #ffd6e8) !important;
         border-radius: 18px !important; border: 1px solid rgba(220,130,160,0.2) !important;
     }
     [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-assistant"]) {
-        background: rgba(255,255,255,0.85) !important; border-radius: 18px !important;
+        background: rgba(255,255,255,0.9) !important; border-radius: 18px !important;
         border: 1px solid rgba(240,200,210,0.4) !important;
     }
     .stChatInput > div {
         border-radius: 24px !important; box-shadow: 0 4px 20px rgba(200,80,120,0.1) !important;
         border: 1.5px solid rgba(210,120,150,0.3) !important; background: white !important;
     }
+    .stChatInput textarea { color: #2d1a20 !important; background: white !important; }
     .stButton > button {
         background: rgba(255,255,255,0.85) !important; border: 1px solid rgba(210,140,160,0.35) !important;
         border-radius: 14px !important; color: #b06070 !important; font-size: 0.82rem !important;
