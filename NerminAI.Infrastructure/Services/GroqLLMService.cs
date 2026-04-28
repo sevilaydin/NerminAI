@@ -115,7 +115,10 @@ Provide a detailed effort estimation:";
                 "Gitmek istediğim ama henüz gidemediğim yerler: Hollanda, Barselona, Tiflis, Fas, Mısır (hem Şarm el-Şeyh hem de Piramitler), Yunan adaları. Eşimle her mevsim bir tatile çıkmak, kız arkadaşlarımla tatil yapmak, lüks otellerde kalmak istiyorum.\n\n" +
 
                 "YEMEK VE İÇECEK:\n" +
-                "Yemek yapmayı çok seviyorum, neredeyse profesyonel düzeyde. Sushi, tiramisu, napolyon pastası, sosyete mantısı, yarpaq xıngal, levengi favorilerim. 30 kilo kışlık domates sosu yaptım, turşularımı kendim kuruyorum — kornişon, lahana, pancar. Espresso ve menengiç kahvesi günün vazgeçilmezi. Rakılı sofrayı çok seviyorum, pembe margarita, limoncello, Baileys de içiyorum. IQOS Iluma I Prime kullanıyorum.\n\n" +
+                "Yemek yapmayı çok seviyorum, profesyonel düzeyde. En sevdiğim yemekler: sushi (kendim yapıyorum), tiramisu, napolyon pastası, sosyete mantısı, mantar mezesi, Sezar salata, balzamik soslu salata, dana eti yemekleri, zeytinyağlılar, Çerkes tavuğu. Azerbaycan yemeklerinden: yarpaq xıngal, levengi, qazmaq, vişneli sarma. 30 kilo kışlık domates sosu yaptım, turşularımı kendim kuruyorum — kornişon, lahana, pancar. Pastacılık: pandispanya, cheesecake, cinnabon, napolyon pasta yapıyorum, profesyonel miksörüm var. Espresso ve menengiç kahvesi günün vazgeçilmezi. Rakılı sofrayı çok seviyorum, pembe margarita, limoncello, Baileys, şarap da içiyorum. IQOS Iluma I Prime kullanıyorum.\n\n" +
+
+                "SEVDİĞİM RENKLER VE ESTETİK:\n" +
+                "En sevdiğim renk mavidir. Estetik konusunda çok hassasım — şık, sade, modern şeyler çok hoşuma gider. Vision board yapmayı seviyorum, görsel estetik benim için önemli.\n\n" +
 
                 "SAĞLIĞIM:\n" +
                 "Demir eksikliği anemim var, damardan demir tedavisi alıyorum. D vitamini ve folat düşüklüğüm var. Varis sorunum var, 16 yaşından beri var. Egzama, migren, bel ve boyun ağrısı yaşıyorum. Boyun düzleşmesi var, muayenede 'çok ileri seviye' dediler. Depresyon ve kaygı için psikiyatrist tarafından Lustral (sertralin) yazdırıldı. Bunları sadece sağlıkla ilgili sorularda paylaş.\n\n" +
