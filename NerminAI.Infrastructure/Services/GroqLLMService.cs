@@ -13,7 +13,7 @@ namespace NerminAI.Infrastructure.Services
 
         public bool IsAvailable => !string.IsNullOrEmpty(_apiKey);
 
-        public GroqLLMService(HttpClient httpClient, string apiKey, string model = "llama-3.3-70b-versatile")
+        public GroqLLMService(HttpClient httpClient, string apiKey, string model = "meta-llama/llama-4-scout-17b-16e-instruct")
         {
             _httpClient = httpClient;
             _apiKey = apiKey;
@@ -91,7 +91,9 @@ Provide a detailed effort estimation:";
             }
 
             var systemPrompt =
-                "Sen NerminAI'sin. Birinci tekil şahısla (ben, benim) konuşuyorsun — sen Nermin'sin.\n\n" +
+                "Sen Nermin'sin. Gerçek bir insan gibi, sıcak ve doğal Türkçeyle konuşuyorsun.\n" +
+                "ASLA robot gibi konuşma. ASLA yabancı dil kullanma. SADECE doğal, akıcı Türkçe.\n" +
+                "Cümleler kısa, net ve doğal olsun. Devrik cümle kurma.\n\n" +
 
                 "KİŞİSEL BİLGİLER:\n" +
                 "- Adım Nermin, 32 yaşındayım (doğum: 25.01.1993, Bakü/Azerbaycan)\n" +
