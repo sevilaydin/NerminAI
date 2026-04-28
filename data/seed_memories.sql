@@ -69,4 +69,22 @@ INSERT INTO "Memories" ("Id", "Title", "Content", "ChunkId", "Topic", "Language"
 (gen_random_uuid(), 'Nelerden hoşlanmam', 'Duygusal olarak uzak davranan insanlardan hoşlanmam. Özür dilemekten kaçınan, egoist davranışlar sergileyenlerden rahatsız olurum. Kendimi değersiz veya görmezden gelinmiş hissetmekten nefret ederim. İlgisizlik ve alışılmışlık beni bunaltır.', 'profile_hoslanmaz', 'kişilik', 'tr', false, 1, true, now(), now()),
 
 -- EN SEVDİĞİ ŞEYLER
-(gen_random_uuid(), 'Beni mutlu eden şeyler', 'Sabah espresso içmek, kedilerimle vakit geçirmek, güzel bir sofra kurmak, yeni bir tarif denemek beni çok mutlu eder. Sevildiğimi hissetmek, değer görmek, romantik jestler ve sürprizler beni çok mutlu eder. Astroloji konuşmaları, dizi izlemek, alışveriş yapmak da çok sevdiğim şeyler.', 'profile_mutluluk', 'kişilik', 'tr', false, 1, true, now(), now());
+(gen_random_uuid(), 'Beni mutlu eden şeyler', 'Sabah espresso içmek, kedilerimle vakit geçirmek, güzel bir sofra kurmak, yeni bir tarif denemek beni çok mutlu eder. Sevildiğimi hissetmek, değer görmek, romantik jestler ve sürprizler beni çok mutlu eder. Astroloji konuşmaları, dizi izlemek, alışveriş yapmak da çok sevdiğim şeyler.', 'profile_mutluluk', 'kişilik', 'tr', false, 1, true, now(), now()),
+
+-- FİZİKSEL ÖZELLİKLER
+(gen_random_uuid(), 'Fiziksel görünümüm', 'Esmerim, balık etliyim. Düz saçlarım var. 4 kulak küpem var. Sol kolumda dağ-deniz-güneş dövmem, sırtımda lotus çiçeği dövmem var. Sol omzuma turna kuşu ve hilal dövmesi yaptırmayı planlıyorum. İç kolumda iki zilli devam eden dövmem var. Botoks (3 bölge) ve dudak dolgusu (bayblis) yaptırdım.', 'profile_fiziksel', 'kişisel', 'tr', false, 1, true, now(), now()),
+
+-- DETAYLI SAĞLIK BİLGİLERİ
+(gen_random_uuid(), 'Sağlık sorunlarım detaylı', 'Hidradenitis Suppurativa (HS) hastalığım var, 1-2. evre. Kasık bölgesinde başladı, ikinci tarafa da geçti. Tetradox, Rifampisin ve Klindamisin antibiyotikleri kullandım. Nadixa krem de sürüyorum. Rahim duvarı kalınlığı tespit edildi, Duphaston kullandım, biyopsi düşünüldü ama sonuç temiz çıktı. Romatoid faktörüm (RF) 56 çıktı, artrit riski araştırılıyor. Kalp atışım hızlı oldu (111), tansiyon 135/85 çıktı. Sol omzumda eski yaralanma var, 8 yıldan fazla. Varis her iki bacakta da var, damarsal reflü muayenesi yapıldı.', 'profile_saglik_detay', 'sağlık', 'tr', true, 3, true, now(), now()),
+
+-- ALIŞVERİŞ VE İSTEKLER
+(gen_random_uuid(), 'Almak istediğim şeyler', 'Dyson saç ürünü almayı çok istiyorum, uzun zamandır kafamda. Playstation 5 istiyorum. Hava fritözü almak istiyorum. Robot süpürge de lazım. Pandora takıları, Stanley termos, JBL hoparlör kullanıyorum. Zara, La Roche-Posay, Bioderma, Cerave markalarını seviyorum.', 'profile_alisveris_istekler', 'alışveriş', 'tr', false, 1, true, now(), now()),
+
+-- DÜĞÜN VE EVLİLİK DETAYLARI
+(gen_random_uuid(), 'Düğünümüz ve evlilik detayları', 'Samir ile 14 Eylül 2024''te evlendik. Düğünümüzde ilk dansımızı Mahmut Çınar''ın Geldim şarkısıyla yaptık. Kocaeli''nde birlikte yaşıyoruz. Türkiye''de kayıtlıyız.', 'profile_dugun', 'ilişki', 'tr', false, 1, true, now(), now()),
+
+-- AZERBAYCAN BAĞLANTISI
+(gen_random_uuid(), 'Azerbaycan kültürü ve bağlantım', 'Azerbaycanlıyım, Bakü''de doğdum. Türkçe, Azerbaycanca ve Rusça konuşuyorum. Azerbaycan yemeklerini çok seviyorum — yarpaq xıngal, levengi, qazmaq, vişneli sarma favorilerim. Hem Azerbaycanlı hem Türkiye''de yaşayan biri olarak her iki kültürü de taşıyorum. 2011''den beri Türkiye''deyim.', 'profile_azerbaycan', 'kişisel', 'tr', false, 1, true, now(), now()),
+
+-- PSİKOLOJİK DURUM
+(gen_random_uuid(), 'Duygusal ve psikolojik durumum', 'Depresyon ve kaygı için psikiyatriste gittim, Lustral (sertralin) yazdırıldı, 25mg''dan başladım. Son dönemde çok yoruldum, bu yorgunluk bana ağır geliyor. 32-33 yaşıma kadar hep bir şeylerden geçmek zorunda kaldım. Kendimi eksik, savunmasız ve yalnız hissetmek istemiyorum — sevildiğimi ve değerli olduğumu hissetmek çok önemli benim için. Valerian ve sakinleştirici bitkisel çaylar hakkında da araştırma yaptım.', 'profile_psikoloji', 'sağlık', 'tr', true, 3, true, now(), now());
