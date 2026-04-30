@@ -52,24 +52,50 @@ st.markdown("""
         background: linear-gradient(135deg, #fff5f0 0%, #ffeef5 50%, #fff0e8 100%) !important;
         color: #2d1a20 !important;
     }
-    header { visibility: hidden; }
     footer { visibility: hidden; }
 
-    /* Sidebar açma/kapama ikonu — header gizli olsa bile görünsün */
-    [data-testid="collapsedControl"] {
+    /* Header'ı tamamen silmek yerine sadece içini gizle, ikon görünsün */
+    header { visibility: hidden; height: 0 !important; }
+
+    /* Sidebar toggle ikonu — hem açıkken hem kapalıyken görünsün */
+    [data-testid="collapsedControl"],
+    button[kind="header"],
+    [data-testid="stSidebarNavToggle"],
+    button[aria-label="Close sidebar"],
+    button[aria-label="Open sidebar"] {
         display: flex !important;
         visibility: visible !important;
         opacity: 1 !important;
-        position: fixed !important;
-        top: 0.6rem !important;
-        left: 0.6rem !important;
-        z-index: 9999 !important;
-        background: rgba(255,240,245,0.95) !important;
-        border-radius: 8px !important;
-        padding: 4px !important;
-        box-shadow: 0 2px 8px rgba(200,80,120,0.15) !important;
     }
-    [data-testid="collapsedControl"] svg { color: #c0406a !important; fill: #c0406a !important; }
+
+    /* Streamlit'in sidebar toggle butonunu her zaman sol üstte sabitle */
+    section[data-testid="stSidebar"] > div:first-child button,
+    [data-testid="stSidebarCollapseButton"] {
+        visibility: visible !important;
+        display: flex !important;
+    }
+
+    /* Tüm toggle butonlarını sol üste sabitle */
+    [data-testid="collapsedControl"] {
+        position: fixed !important;
+        top: 0.5rem !important;
+        left: 0.5rem !important;
+        z-index: 99999 !important;
+        visibility: visible !important;
+        display: flex !important;
+        background: rgba(255,240,245,0.97) !important;
+        border-radius: 10px !important;
+        padding: 6px !important;
+        box-shadow: 0 2px 12px rgba(200,80,120,0.2) !important;
+        border: 1px solid rgba(210,130,160,0.3) !important;
+    }
+    [data-testid="collapsedControl"] button {
+        color: #c0406a !important;
+    }
+    [data-testid="collapsedControl"] svg {
+        fill: #c0406a !important;
+        stroke: #c0406a !important;
+    }
 
     /* Sidebar */
     section[data-testid="stSidebar"] {
